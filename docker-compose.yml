@@ -1,0 +1,13 @@
+version: '2'
+services:
+  svn:
+    build:
+      context: ./
+      dockerfile: svn.docker
+    volumes:
+      - ./data:/var/lib/svn
+      - ./dav_svn.conf:/etc/apache2/mods-available/dav_svn.conf
+      - ./dav_svn.passwd:/etc/apache2/dav_svn.passwd
+    ports:
+      - "8085:80"
+    

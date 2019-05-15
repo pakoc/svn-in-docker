@@ -1,0 +1,14 @@
+FROM ubuntu:18.04
+
+RUN apt update
+RUN apt install apache2 -y
+
+RUN apt install subversion libapache2-mod-svn libsvn-dev -y
+
+
+RUN apt install supervisor -y
+ADD ./supervisor.conf /etc/supervisor/conf.d/supervisor.conf
+
+CMD ["/usr/bin/supervisord"]
+
+
