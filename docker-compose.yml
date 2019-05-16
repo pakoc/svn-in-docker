@@ -8,6 +8,7 @@ services:
       - ./data:/var/lib/svn
       - ./dav_svn.conf:/etc/apache2/mods-available/dav_svn.conf
       - ./dav_svn.passwd:/etc/apache2/dav_svn.passwd
+      - ./dav_svn.auth:/etc/apache2/dav_svn.auth
     ports:
       - "8085:80"
     

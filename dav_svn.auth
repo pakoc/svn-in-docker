@@ -1,0 +1,9 @@
+[groups]
+testgroup = testuser1, testuser2
+testgroup2 = testuser3, testuser4, testuser5
+testgroup3 = testuser6, testuser7
+
+[/]
+* = r
+@testgroup = rw
+testuser4 = rw
