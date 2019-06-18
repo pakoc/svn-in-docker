@@ -4,6 +4,8 @@ RUN apt update
 RUN apt install apache2 -y
 
 RUN apt install subversion libapache2-mod-svn libsvn-dev -y
+
+RUN a2enmode headers
  
 CMD apachectl -D FOREGROUND
 
